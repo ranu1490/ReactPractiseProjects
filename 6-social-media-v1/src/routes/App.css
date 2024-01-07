@@ -1,0 +1,35 @@
+.app-container{
+    display: flex;
+}
+
+.content{
+    min-width: 89.25%;
+}
+
+.sidebar{
+    height: 800px;
+}
+
+.post-card{
+    margin: 20px 50px;
+}
+
+.tags{
+    margin: 0px 3px;
+}
+
+.reaction{
+    margin: 15px 0 0 0;
+}
+
+.create-post{
+    margin-top: 40px;
+    margin-left: 40px;
+    border: 0.1rem solid rgb(159, 153, 153);
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.welcome-message{
+    margin: 50px 0px;
+}

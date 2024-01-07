@@ -1,0 +1,19 @@
+input{
+  width: 100%;
+}
+
+button{
+  min-width: 80px;
+  width: 100%;
+}
+
+.row-items{
+  margin: 7px 3px;
+}
+
+.welcome{
+  margin: 30px;
+  font-size: 50px;
+  font-weight: 600;
+  font-family: serif;
+}

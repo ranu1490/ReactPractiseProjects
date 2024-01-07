@@ -1,0 +1,32 @@
+.container{
+    border: 2px solid rgb(208, 203, 203);
+    border-radius: 10px;
+    height: 550px;
+    width: 300px;
+    align-items: center;
+    margin: 0px 0px 0px 400px;
+}
+
+.h3{
+    text-align: center;
+    margin-top: 0px;
+    color: red;
+}
+
+.display{
+    display: flex;
+    margin: 6.5px;
+    width: 280px;
+    font-size: 50px;
+}
+
+.buttonsGroup{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.button{
+    margin: 5px;
+    font-size: 22px;
+}

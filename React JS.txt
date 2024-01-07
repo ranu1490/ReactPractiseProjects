@@ -1,0 +1,163 @@
+github-> https://github.com/KG-Coding-with-Prashant-Sir/React_Complete_YouTube
+
+Create Project ->npm create vite@latest / npm create-react-app project name
+
+to run -> npm run dev / npm start
+
+File Extensions -> .js, .jsx
+
+Class vs Functional Components
+
+What is JSX
+
+Exporting components 
+	export const component_name
+	export default function component_name
+
+Dynamic Components
+
+Reusable Components
+
+Bootstrap
+	1. Install -> npm i bootstrap@5.3.2
+	2. import -> import "bootstrap/dist/css/bootstrap.min.css"
+
+Fragments -> <></> or <React.Fragment></React.Fragment/>
+			allows grouping of multiple elements without extra DOM nodes
+			return multiple elemets without a wrapping parent
+			
+Map -> render lists from array data 
+	{items.map((item)=><li key={item.id}>{item.name}</li>)}
+	key -> assigns unique key for optimized re-render
+	
+Conditional Rendering -> 
+	1. {condition && <h1>do something</>}
+	2. {!condition ? <h1>Error!</h1> : <h1>congratulations</h1>}
+	3. if(condition){
+			return <h1>Do Something</h1>
+		}
+
+props
+
+CSS Modules -> 
+	file name -> filename.module.css
+	import in file as -> import styles from "./filename.module.css"
+	<li className = {`${styles.class_name} other css_name`}/c>
+	
+Passing Children
+
+Handling Events -> react events uses camelCase, e.g., onClick
+
+Passing function via props 
+
+useState hooks, How to manage component state, state vs props
+
+React Icons
+	install -> npm install react-icons --save
+	import -> import { icon_name } from 'react-icons/group';
+	
+React Developer tools extension 
+	1. Inspection
+	2. States & props
+	3. Perfomance -> profiling tool is used to measure performance 
+	4. Navigation -> conveniently navigate through entire components
+	5. Filtering -> filter components by name or source to locate them quickly
+	6. Real-time Feedback ->see live changes as you modify state or props
+	
+How React works
+	1. Root component -> app is main or root component in application and also starting point of react component tree.
+	2. Virtual DOM -> it is between the code and real DOM.
+				   -> React creates an in-memory structure called virtual DOM.
+				   -> there are current and pervious version of virtual DOM.
+	3. Reconcillation Process -> when component data changes, React updates the virtual DOM's state to mirror these changes 
+							  -> React then compares the current and previous versions of the virtual DOM.
+							  -> It identifies the specific nodes that need updating.
+							  -> Only these nodes are updated in the real browser DOM, making it efficient.
+						
+Using forms 
+	1. use onSubmit handler 
+	2. by default form sends the data to server to prevent it use -> event.preventDefault();
+	
+useRef
+	1. it is a react hook. useState rerenders while useRef stores the current value without re-render
+	2. whenever we don't want the component to re-render then goo for useRef
+	3. used with ref attribute for direct DOM interaction 
+	4. can hold previous state or prop values
+	
+updates state from previous state
+	Functional update -> use (existingPosts) => [...existingPosts, postData]
+	
+Context API 
+	1. Prop drilling -> when we pass the prop from root to children level some of the child component don't need it though we pass to them to pass it to other child component
+						Hence, this results into prop drilling.
+	2. createContext-> method to create context 
+	3. useContext
+	
+useReducer -> provides more control over state operation compared to useState, especially for more complex logic.
+	1. const [state, dispatchAction] = useReducer(reducerFunction, initialState)
+	
+Dummy data from server -> Dummy Json website -> https://dummyjson.com/docs/posts
+	1. Fetch-> is used to fetch data from server, it returns promise with response object.
+	
+useEffect Hook -> it handles side effects like data fetching and event listeners.
+			   -> it run automatically after every render by default.	
+			1. [] -> it is called dependency array, empty array(no dependency) means effect runs only once, and if there is any
+					  variable inside the array like [data] so effect will change when the variable changes.
+			2. ...nothing 
+	
+Handling Loading state ->  when data is not fetched from server make loading 
+
+useEffect cleanup -> returning a function from useEffect allows for cleanup, ideal for removing event listeners.
+					-> whenever component is not in use then this cleanup will execute.
+
+Advanced useEffect -> use AbortController (it is realetd to fetch) to clean useEfect
+					  useEffect(()=>{
+						const controller = new AbortController();
+						const signal = controller.signal;
+						setFetch(true);
+						fetch('https://dummyjson.com/posts',{signal})
+						.then(res => res.json())
+						.then((data)=>{
+									addInitialPosts(data.posts);
+									setFetch(false);
+									});
+						 return ()=>{
+							console.log("cleaning use effect");
+							controller.abort();
+						 }
+					  },[])
+					  
+useCallback Hook -> if u want to save method then go for useCallback, it memoizes(save) function
+				1. Memorization: Preserves function across renders to prevent un-necessary re-renders.
+				2. Optimization: Enhances performance in components with frequent updates.
+				3. Dependency array: recreates the function only when specific dependencies change.
+				4. Event Handlers: used to keep consistent function refrences for child components.
+				5. with useEffect: prevents infinite loops by maintaining function refrences.
+				syntax: 
+					useCallback(
+					()=>{
+						function(a,b);
+					},[a,b]
+					);
+
+useMemo hook -> if yu want to save data, do calculations, useMemo memoizes(save) values or results of function.
+				syntax: 
+					useMemo(
+						()=>{
+							...
+							return value;
+						},
+						[dependency]
+					 );
+					 
+Custon Hooks -> whenever there is same logic written in code in the different compontents 
+			 -> enables sharing of stateful logi without changing component hierarchy.
+			 -> can return arrays, objects, or any other data types.
+		
+React Router
+			1. createBrowserRouter -> defines paths
+			2. RouterProvider -> <RouterProvider router={router}>
+			3. Layout Route -> helps to use shared elements.
+							-> Outlet componet is used to render the children at the correct places.
+			4. React Link -> used to avoid using reloading of page, to is used instead of href and Link insted of a.
+			5. useNavigate hook -> to dynamically navigate to page 
