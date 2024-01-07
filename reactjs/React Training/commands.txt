@@ -1,0 +1,16 @@
+to create fakebackend 
+
+npm init -y
+install json server -> npm i json-server
+create db.json file and paste data to it
+package.json-> scripts-> "backend":"json-server --watch db.json --port 5000",
+to run -> npm run backend
+
+
+create app .env file and add :-REACT_APP_BASEURL = http://localhost:5000/employees
+install alert library: npm i sweetalert2
+
+
+axios: npm i axios
+
+redux : npm i react-redux redux-saga

@@ -1,0 +1,63 @@
+{
+  "policy": [
+    {
+      "id": 1,
+      "policyID": 1,
+      "policyName": "LIC",
+      "policyCategory": "Life Insurance",
+      "description": "life insurance is good",
+      "amount": 20000,
+      "policyYear": 2,
+      "interest": 10
+    },
+    {
+      "id": 2,
+      "policyID": 2,
+      "policyName": "Health",
+      "policyCategory": "Health Insurance",
+      "description": "Health insurance is good",
+      "amount": 30000,
+      "policyYear": 6,
+      "interest": 20
+    },
+    {
+      "policyID": "3",
+      "policyName": "vng",
+      "policyCategory": "Term",
+      "description": "indebjb",
+      "amount": "10000",
+      "policyYear": "8",
+      "interest": "20",
+      "id": 3
+    },
+    {
+      "policyID": "5",
+      "policyName": "dn",
+      "policyCategory": "jvtgn",
+      "description": "indebjb",
+      "amount": "10000",
+      "policyYear": "9",
+      "interest": "0",
+      "id": 5
+    },
+    {
+      "policyID": "4",
+      "policyName": "Zeevan",
+      "policyCategory": "jvtgn",
+      "description": "yntjhf",
+      "amount": "10000",
+      "policyYear": "8",
+      "interest": "88",
+      "id": 6
+    },
+    {
+      "policyName": "Zeevan Bima",
+      "policyCategory": "jvtgn",
+      "description": "indebjb",
+      "amount": "10000",
+      "policyYear": "9",
+      "interest": "0",
+      "id": 7
+    }
+  ]
+}

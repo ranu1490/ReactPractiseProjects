@@ -1,0 +1,20 @@
+{
+  "name": "fakebackend1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "backend":"json-server --watch db.json --port 5000",
+    "pbackend":"json-server --watch policy.json --port 5000",
+    "cbackend":"json-server --watch collegedb.json --port 5000",
+    "ebackend":"json-server --watch employeedb.json --port 5000",
+    "fbackend":"json-server --watch flightdb.json --port 5000",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "json-server": "^0.17.3"
+  }
+}

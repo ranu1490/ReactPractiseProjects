@@ -1,0 +1,14 @@
+{
+  "trainees": [
+    {
+      "id": 1,
+      "name": "Pankaj",
+      "salary": "10000"
+    },
+    {
+      "name": "Alex",
+      "salary": "3000",
+      "id": "3"
+    }
+  ]
+}

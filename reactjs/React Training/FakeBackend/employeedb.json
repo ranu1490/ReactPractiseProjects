@@ -1,0 +1,34 @@
+{
+  "employee": [
+    {
+      "name": "Pankaj",
+      "designation": "Dev",
+      "id": 1
+    },
+    {
+      "id": "2",
+      "name": "Ranu",
+      "designation": "Java Dev"
+    },
+    {
+      "id": "3",
+      "name": "Kim",
+      "designation": "Java Dev"
+    },
+    {
+      "name": "KK",
+      "designation": "React Dev",
+      "id": "4"
+    },
+    {
+      "name": "Ranu Kumari",
+      "designation": "Developer",
+      "id": "5"
+    },
+    {
+      "name": "dbnw",
+      "designation": "dev",
+      "id": "6"
+    }
+  ]
+}
